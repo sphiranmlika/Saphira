@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="author" content="Nur Inaya Bahar_221011025">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="Kalkulator">
+        <link rel="stylesheet" href="......"/>
+        <title>Kalkulator</title>
+    </head>
+    <body>
+        <div>
+            <input id="setangka" class="nilai"/>
+            <div id="hasil"></div>
+            <div class="flex">
+                <div onclick="setNilai(1)">1</div>
+                <div onclick="setNilai(2)">2</div>
+                <div onclick="setNilai(3)">3</div>
+                <div onclick="tambah()">
+                    +
+                </div>
+            </div>
+            <div class="flex">
+                <div onclick="setNilai(4)">4</div>
+                <div onclick="setNilai(5)">5</div>
+                <div onclick="setNilai(6)">6</div>
+                <div onclick="kurang()">
+                    -
+                </div>
+            </div>
+            <div class="flex">
+                <div onclick="setNilai(7)">7</div>
+                <div onclick="setNilai(8)">8</div>
+                <div onclick="setNilai(9)">9</div>
+                <div onclick="kali()">
+                    x
+                </div>
+            </div>
+            <div class="flex">
+                <div onclick="setDesimal()">.</div>
+                <div onclick="setNilai(0)">0</div>
+                <div onclick="samaDengan()">=</div>
+                <div onclick="bagi()">
+                    /
+                </div>
+            </div>
+        </div>
+        <script>
+            var x = document.getElementById("setangka");
+            var hasil = document.getElementById("hasil"); 
+
+            function setNilai(nilai){
+                var setNilai = x.value + nilai;
+                x.value = setNilai;
+                var nilaiJumlah = [];
+
+                var splitNilai = setNilai.split('+').join(';+;').split(";").split('-').join(';-;').split(";").split('x').join(';x;').split(";").split('/').join(';/;').split(";");
+                if(splitNilai.lenght > 2){
+                    let hasilSementara = Number(splitNilai[0]);
+                    
+                }
+            }
+        </script>
+    </body>
+</html>
